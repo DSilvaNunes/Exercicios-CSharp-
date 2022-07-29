@@ -1,0 +1,81 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Aula_05
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int x = 0;
+
+            DateTime dataNasc = DateTime.Parse("10/08/1971"), dataHoje;
+            dataNasc = new DateTime(1971,08,10,12,05,01);
+
+            // Console.WriteLine("Digite sua data de nascimento:");
+            //dataNasc = DateTime.Parse(Console.ReadLine());
+
+            dataHoje = DateTime.Now;
+
+            Console.WriteLine("Data hoje: {0} ", dataHoje);
+            Console.WriteLine("Data hoje: {0} ", dataHoje.ToLongDateString());
+            Console.WriteLine("Data hoje: {0} ", dataHoje.ToShortDateString());
+            Console.WriteLine("Data hoje: {0} ", dataHoje.ToShortTimeString());
+            Console.WriteLine("Data hoje: {0} ", dataHoje.ToLongTimeString());
+            Console.WriteLine("Dia de hoje: {0} ", dataHoje.Day);
+            Console.WriteLine("Mês de hoje: {0} ", dataHoje.Month);
+            Console.WriteLine("Ano de hoje: {0} ", dataHoje.Year);
+            Console.WriteLine("data de hoje em String: {0} ", dataHoje.ToString());
+            Console.WriteLine("Ano de hoje: {0} ", (int)dataHoje.DayOfWeek);
+
+            DateTime dataQ = new DateTime(2019, 05, 01);
+            int cont = 0, cont2 = 0;
+
+            // dia das mães 
+            while (dataQ.AddDays(cont).Year <= 2024)
+            {
+                if (dataQ.AddDays(cont).Month == 5 && 
+                    (int)dataQ.AddDays(cont).DayOfWeek == 0)
+                {
+                    cont2++;
+
+                    if (dataQ.AddDays(cont).Month == 5 &&
+                    (int)dataQ.AddDays(cont).DayOfWeek == 0 &&
+                    cont2 == 2)
+                    {
+                        Console.WriteLine(dataQ.AddDays(cont).ToLongDateString());
+                        cont2 = 0;
+                        dataQ = new DateTime(dataQ.AddYears(1).Year, 05, 01);
+                        cont = -1;
+                    }
+                }
+                cont++;
+            }
+
+
+
+            //string y;
+            //y = dataHoje.ToString();
+            int d = 120, m = 4;
+
+            Console.WriteLine("Adicionar dias: {0}", dataHoje.AddDays(d).ToShortDateString());
+            Console.WriteLine("Adicionar dias: {0}", dataHoje.AddMonths(m).ToShortDateString());
+            Console.WriteLine("Adicionar dias: {0}", dataHoje.AddYears(m).ToShortDateString());
+
+
+            DateTime data1 = DateTime.Parse("10/09/2018");
+            DateTime data2 = DateTime.Now;
+
+            int res = (int)data2.Subtract(data1).TotalDays;
+
+            Console.WriteLine(res);
+
+
+            Console.ReadKey();
+
+        }
+    }
+}

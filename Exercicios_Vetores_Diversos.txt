@@ -1,0 +1,678 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Exercicio_Vetor_Matriz
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            #region Questão 01
+
+            //int[] mA = new int[8];
+            //int[] mB = new int[8];
+
+            //for (int i = 0; i < 8; i++)
+            //{
+            //    mA[i] = int.Parse(Console.ReadLine());
+            //    mB[i] = mA[i] * 3;
+            //}
+
+            //foreach (int aux in mB)
+            //{
+            //    Console.WriteLine(aux);
+            //}
+
+            //Console.ReadKey();
+
+
+            #endregion
+
+            #region Questão 02
+            //int[] mA = new int[5];
+            //int[] mB = new int[5];
+            //int[] mC = new int[5];
+
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    Console.Write("A: ");
+            //    mA[i] = int.Parse(Console.ReadLine());
+            //    Console.Write("B: ");
+            //    mB[i] = int.Parse(Console.ReadLine());
+            //    mC[i] = mA[i] - mB[i];
+            //}
+
+            //foreach (int aux in mC)
+            //{
+            //    Console.WriteLine(aux);
+            //}
+
+            //Console.ReadKey();
+
+            #endregion
+
+            #region Questão 03
+            //int[] mA = new int[5];
+            //int[] mB = new int[5];
+
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    Console.Write("A: ");
+            //    mA[i] = int.Parse(Console.ReadLine());
+            //    mB[i] = mA[i] * mA[i];
+            //}
+
+            //foreach (int aux in mB)
+            //{
+            //    Console.WriteLine(aux);
+            //}
+
+            //Console.ReadKey();
+
+            #endregion
+
+            #region Questão 04
+            //int[] mA = new int[5];
+            //int[] mB = new int[5];
+
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    Console.Write("A: ");
+            //    mA[i] = int.Parse(Console.ReadLine());
+
+            //    //*** fatorial
+            //    int fat = 1;
+            //    for (int x = 1; x <= mA[i]; x++)
+            //    {
+            //        fat = fat * x;
+            //    }
+            //    //*** resultado do fatorial para a matriz B 
+            //    mB[i] = fat;
+            //}
+
+            //foreach (int aux in mB)
+            //{
+            //    Console.WriteLine(aux);
+            //}
+
+            //Console.ReadKey();
+
+            #endregion
+
+            #region Questão 05
+
+            //int[] mA = new int[5];
+            //int[] mB = new int[5];
+            //int[] mC = new int[10];
+
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    Console.Write("A: ");
+            //    mA[i] = int.Parse(Console.ReadLine());
+            //    mC[i] = mA[i];
+            //    Console.Write("B: ");
+            //    mB[i] = int.Parse(Console.ReadLine());
+            //    mC[i + 5] = mB[i];
+            //}
+
+            //foreach (int aux in mC)
+            //{
+            //    Console.WriteLine(aux);
+            //}
+
+            //Console.ReadKey();
+
+
+            #endregion
+
+            #region Questão 06
+            //int[] mA = new int[5];
+            //int[] mB = new int[10];
+            //int[] mC = new int[15];
+
+            //for (int i = 0; i < 10; i++)
+            //{
+
+            //    if (i < 5)
+            //    {
+            //        Console.Write("A: ");
+            //        mA[i] = int.Parse(Console.ReadLine());
+            //        mC[i] = mA[i];
+
+            //    }
+            //    Console.Write("B: ");
+            //    mB[i] = int.Parse(Console.ReadLine());
+            //    mC[i + 5] = mB[i];
+
+            //}
+
+            //foreach (int aux in mC)
+            //{
+            //    Console.WriteLine(aux);
+            //}
+
+            //Console.ReadKey();
+
+            #endregion
+
+            #region Questão 07
+
+            //int[] mA = new int[5];
+            //int[] mB = new int[5];
+
+            //int x = 4;
+
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    Console.Write("A[{0}]: ", i);
+            //    mA[i] = int.Parse(Console.ReadLine());
+            //    mB[x - i] = mA[i];
+            //    Console.WriteLine("B[{0}]: {1}", x - i, mB[x - i]);
+
+            //}
+
+            //foreach (int aux in mA)
+            //{
+            //    Console.WriteLine(aux);
+            //}
+
+            //foreach (int aux in mB)
+            //{
+            //    Console.WriteLine(aux);
+            //}
+
+            //Console.ReadKey();
+
+
+            #endregion
+
+            #region Questão 08
+            //int[] mA = new int[5];
+            //int[] mB = new int[5];
+            //int[] mC = new int[5];
+            //int[] mD = new int[15];
+
+            //for (int i = 0; i < 5; i++)
+            //{
+
+            //    Console.Write("A: ");
+            //    mA[i] = int.Parse(Console.ReadLine());
+            //    mD[i] = mA[i];
+
+            //    Console.Write("B: ");
+            //    mB[i] = int.Parse(Console.ReadLine());
+            //    mD[i + 5] = mB[i];
+
+            //    Console.Write("C: ");
+            //    mB[i] = int.Parse(Console.ReadLine());
+            //    mD[i + 10] = mB[i];
+            //}
+
+            //foreach (int aux in mD)
+            //{
+            //    Console.WriteLine(aux);
+            //}
+
+            //Console.ReadKey();
+
+            #endregion
+
+            #region Questão 09
+
+            //int[] mA = new int[5];
+            //int[] mB = new int[5];
+
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    Console.Write("A: ");
+            //    mA[i] = int.Parse(Console.ReadLine());
+
+            //    //*** somatória
+            //    int fat = 0;
+            //    for (int x = 1; x <= mA[i]; x++)
+            //    {
+            //        fat = fat + x;
+            //    }
+            //    //*** resultado da somatória para a matriz B 
+            //    mB[i] = fat;
+            //}
+
+            //foreach (int aux in mB)
+            //{
+            //    Console.WriteLine(aux);
+            //}
+
+            //Console.ReadKey();
+
+            #endregion
+
+            #region Questão 10
+            //int[] mA = new int[8];
+            //int[] mB = new int[8];
+
+            //for (int i = 0; i < 8; i++)
+            //{
+            //    mA[i] = int.Parse(Console.ReadLine());
+            //    mB[i] = mA[i] * -1;
+            //}
+
+            //foreach (int aux in mB)
+            //{
+            //    Console.WriteLine(aux);
+            //}
+
+            //Console.ReadKey();
+
+            #endregion
+
+            #region Questão 11
+
+            //double[] mA = new double[8];
+            //double[] mB = new double[8];
+
+            //for (int i = 0; i < 8; i++)
+            //{
+            //    mA[i] = double.Parse(Console.ReadLine());
+            //    mB[i] = mA[i] / 2;
+            //}
+
+            //foreach (double aux in mA)
+            //{
+            //    Console.WriteLine(aux);
+            //}
+
+
+            //foreach (double aux in mB)
+            //{
+            //    Console.WriteLine(aux);
+            //}
+
+            //Console.ReadKey();
+
+            #endregion
+
+            #region Questão 12
+
+            //int[] mA = new int[10];
+            //int valorTabuada = 0;
+
+            //Console.Write("Digite o valor da tabuada: ");
+            //valorTabuada = int.Parse(Console.ReadLine());
+
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    mA[i] = valorTabuada * (i + 1);
+
+            //}
+
+            //foreach (int aux in mA)
+            //{
+            //    Console.WriteLine(aux);
+            //}
+
+            //Console.ReadKey();
+
+
+            #endregion
+
+            #region Questão 13
+
+            //double[] tempCelsius = new double[20];
+
+            //for (int i = 0; i < 10; i++)
+            //{
+
+            //    Console.Write("Digite a {0} temperatura: ", (i + 1));
+            //    tempCelsius[i] = double.Parse(Console.ReadLine());
+
+            //}
+
+            //Console.WriteLine("A mais alta: {0} ", tempCelsius.Max());
+            //Console.WriteLine("A mais baixa: {0} ", tempCelsius.Min());
+            //Console.WriteLine("A mádia: {0} ", tempCelsius.Average());
+
+            //Console.ReadKey();
+
+            #endregion
+
+            #region Questão 14
+            //// °F = °C × 1,8 + 32
+
+            //double[] tempCelsius = new double[10];
+            //double[] tempFahrenheit = new double[10];
+
+            //for (int i = 0; i < 10; i++)
+            //{
+
+            //    Console.Write("Digite a {0}° temperatura em Celsius: ", (i + 1));
+            //    tempCelsius[i] = double.Parse(Console.ReadLine());
+
+            //    tempFahrenheit[i] = (tempCelsius[i] * 1.8) + 32;
+
+            //}
+
+            //Console.WriteLine("temperatura em Celsius:");
+            //foreach (double aux in tempCelsius)
+            //{
+            //    Console.WriteLine(aux);
+            //}
+
+            //Console.WriteLine("\ntemperatura em Fahrenheit:");
+            //foreach (double aux in tempFahrenheit)
+            //{
+            //    Console.WriteLine(aux);
+            //}
+
+            //Console.ReadKey();
+
+            #endregion
+
+            #region Questão 15
+
+            //string[] nomes =
+            //{"Paulo", "Teresa", "George", "Danilo", "Fábio",
+            //"Fred", "Milton", "Luís", "Cristina", "Viviane"};
+
+            //string sn = "", qualquerNome = "";
+            //bool ok = false;
+            //do
+            //{
+            //    Console.Write("Digite um nome: ");
+            //    qualquerNome = Console.ReadLine();
+            //    int indice = 0;
+
+            //    for (int i = 0; i < nomes.Length; i++)
+            //    {
+            //        if (nomes[i].ToUpper() == qualquerNome.ToUpper())
+            //        {
+            //            indice = i;
+            //            ok = true;
+            //            break;
+            //        }
+            //        else
+            //            ok = false;
+            //    }
+
+            //    if (ok)
+            //    {
+            //        Console.Write("Nome encontrado! no índice {0} deseja substitui-lo por outro? (S/N)", indice);
+            //        sn = Console.ReadLine();
+
+            //        if (sn.ToUpper() == "S")
+            //        {
+            //            Console.Write("Digite o novo nome: ");
+            //            qualquerNome = Console.ReadLine();
+            //            nomes[indice] = qualquerNome;
+            //            Console.WriteLine("Nova Lista");
+            //            foreach (string item in nomes)
+            //            {
+
+            //                Console.WriteLine(item);
+            //            }
+
+            //        }
+
+            //    }
+            //    else
+            //        Console.WriteLine("Nome não encontrado! ");
+
+            //    Console.Write("Quer procurar outro nome? ");
+            //    sn = Console.ReadLine();
+
+            //} while (sn.ToUpper() == "S");
+
+            #endregion
+
+            #region Questão 16
+
+            //string[] diaSemana = new string[7];
+            //diaSemana[0] = "Domingo";
+            //diaSemana[1] = "segunda-feira";
+            //diaSemana[2] = "terça-feira";
+            //diaSemana[3] = "quarta-feira";
+            //diaSemana[4] = "quinta-feira";
+            //diaSemana[5] = "sexta-feira";
+            //diaSemana[6] = "Sábado";
+
+            //string[] mesAno = new string[13];
+            //mesAno[1] = "janeiro";
+            //mesAno[2] = "fevereiro";
+            //mesAno[3] = "março";
+            //mesAno[4] = "abril";
+            //mesAno[5] = "maio";
+            //mesAno[6] = "junho";
+            //mesAno[7] = "junlho";
+            //mesAno[8] = "agosto";
+            //mesAno[9] = "setembro";
+            //mesAno[10] = "outbro";
+            //mesAno[11] = "novembro";
+            //mesAno[12] = "dezembro";
+
+            //DateTime algumaData = new DateTime();
+
+            //Console.Write("Digite uma data: ");
+            //algumaData = DateTime.Parse(Console.ReadLine());
+
+            //Console.WriteLine
+            //    ("Data: {0} dia: {1} mês: {2}",
+            //    algumaData.ToShortDateString(),
+            //    diaSemana[(int)algumaData.DayOfWeek],
+            //    mesAno[algumaData.Month]);
+            //Console.ReadKey();
+
+            #endregion
+
+            #region Questão 17
+
+            //int[] primo = new int[10];
+            //int contPrimo = 0, resto = 0, contResto = 0, num = 100;
+
+
+            //// descobrir primo
+
+            //do
+            //{
+            //    contResto = 0;
+            //    for (int i = 1; i <= num; i++)
+            //    {
+            //        resto = num % i;
+
+            //        if (resto == 0)
+            //            contResto++;
+            //    }
+
+            //    if (contResto == 2)
+            //    {
+            //        primo[contPrimo] = num;
+            //        contPrimo++;
+            //    }
+
+            //    num++;
+            //} while (contPrimo < 10);
+
+            //foreach (int aux in primo)
+            //{
+            //    Console.WriteLine(aux);
+            //}
+
+            //Console.WriteLine("A soma do vertor primo é {0} e a média é: {1}", primo.Sum(), primo.Average());
+
+            //Console.ReadKey();
+
+            #endregion
+
+            #region Questão 18
+
+            //string[] nome = new string[5];
+            //double[] nota1 = new double[5];
+            //double[] nota2 = new double[5];
+            //double[] media = new double[5];
+            //string[] res = new string[5];
+
+            //double maiorMedia = 0;
+            //int indiceMaior = 0;
+
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    Console.Clear();
+            //    Console.Write("Nome do {0}° aluno: ", (i + 1));
+            //    nome[i] = Console.ReadLine();
+
+            //    Console.Write("1° Nota: ");
+            //    nota1[i] = double.Parse(Console.ReadLine());
+
+            //    Console.Write("2° Nota: ");
+            //    nota2[i] = double.Parse(Console.ReadLine());
+
+            //    media[i] = (nota1[i] + nota2[i]) / 2;
+            //    res[i] = (media[i] >= 7) ? "Aprovado" : "Reprovado";
+
+            //    if (media[i] > maiorMedia)
+            //    {
+            //        maiorMedia = media[i];
+            //        indiceMaior = i;
+            //    }
+
+            //    Console.WriteLine("Média: {0}", media[i]);
+            //    Console.WriteLine("Resultado: {0}", res[i]);
+
+            //    Console.ReadKey();
+
+            //}
+
+            //for (int i = 0; i < 5; i++)
+            //{
+            //    Console.WriteLine
+            //        ("Nome: {0} - N1: {1} - N2: {2} - Média: {3} - Res: {4}",
+            //        nome[i], nota1[i], nota2[i], media[i], res[i]);
+            //}
+
+            //Console.WriteLine("O Aluno com maior média: {0} - média: {1}", nome[indiceMaior], media[indiceMaior]);
+
+            //Console.ReadKey();
+            #endregion
+
+            #region Questão 19
+
+            //string[] poltrona = new string[150];
+            //string nome = "", sn = "";
+            //int op = 0, numPoltrona = 0, cont = 0;
+            //bool ok = true;
+            //double faturamento = 0;
+            //for (int i = 0; i < poltrona.Length; i++)
+            //{
+            //    poltrona[i] = "Vazia";
+            //}
+
+            //do
+            //{
+            //    Console.Clear();
+            //    Console.WriteLine("*** Sistema de Reserva de Poltronas ****");
+            //    Console.WriteLine("1. Fazer reserva de poltrona");
+            //    Console.WriteLine("2. Cancelamento de reservas");
+            //    Console.WriteLine("3. Faturamento");
+            //    Console.WriteLine("4. Consultar poltronas");
+            //    Console.WriteLine("5. Sair");
+
+            //    op = int.Parse(Console.ReadLine());
+
+            //    switch (op)
+            //    {
+            //        case 1:
+            //            Console.Write("Escolha a poltrona: (0 a 149): ");
+            //            numPoltrona = int.Parse(Console.ReadLine());
+
+            //            if (poltrona[numPoltrona] == "Vazia")
+            //            {
+            //                Console.Write("Digite o nome: ");
+            //                nome = Console.ReadLine();
+            //                poltrona[numPoltrona] = nome;
+            //                Console.WriteLine("Reserva Realizada! - Tecle algo");
+            //                Console.ReadKey();
+
+            //            }
+            //            else
+            //            {
+            //                Console.WriteLine("Poltrona Ocupada! - Tecle algo");
+            //                Console.ReadKey();
+            //            }
+
+            //            break;
+
+            //        case 2:
+            //            Console.Write("Escolha a poltrona a cancelar: (0 a 149): ");
+            //            numPoltrona = int.Parse(Console.ReadLine());
+
+            //            if (poltrona[numPoltrona] != "Vazia")
+            //            {
+            //                Console.WriteLine(" A poltrona está reservada para: {0}", poltrona[numPoltrona]);
+            //                Console.Write(" deseja cancelá-lo? (S/N): ");
+            //                sn = Console.ReadLine();
+            //                if (sn.ToUpper() == "S")
+            //                {
+            //                    poltrona[numPoltrona] = "Vazia";
+            //                    Console.WriteLine("Reserva da poltrona {0} foi cancelada! - Tecle algo", numPoltrona);
+            //                    Console.ReadKey();
+            //                }
+            //                else
+            //                {
+            //                    Console.WriteLine("Nenhuma ação realizada! - Tecle algo", numPoltrona);
+            //                    Console.ReadKey();
+            //                }
+
+            //            }
+            //            else
+            //            {
+            //                Console.WriteLine("Poltrona já sem reserva! - Tecle algo");
+            //                Console.ReadKey();
+            //            }
+            //            break;
+
+            //        case 3:
+            //            for (int i = 0; i < poltrona.Length; i++)
+            //            {
+            //                if (poltrona[i] != "Vazia")
+            //                {
+            //                    if (i <= 49)
+            //                        faturamento += 450;
+            //                    else if (i > 49 && i <= 99)
+            //                        faturamento += 250;
+            //                    else
+            //                        faturamento += 150;
+            //                }
+            //            }
+
+            //            Console.WriteLine("Faturamento: {0} - tecle algo", faturamento);
+            //            Console.ReadKey();
+
+            //            break;
+
+            //        case 4:
+            //            for (int i = 0; i < poltrona.Length; i++)
+            //            {
+            //                Console.Write("Polt.{0}: {1} ", i, poltrona[i]);
+            //                if (cont == 5)
+            //                {
+            //                    Console.WriteLine();
+            //                    cont = 0;
+            //                }
+            //                cont++;
+            //            }
+            //            Console.ReadKey();
+            //            break;
+
+            //        case 5:
+            //            ok = false;
+            //            break;
+            //    }
+
+            //} while (ok);
+            #endregion
+
+
+        }
+    }
+}

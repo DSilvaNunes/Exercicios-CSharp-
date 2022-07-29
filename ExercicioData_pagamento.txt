@@ -1,0 +1,236 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ExercicioData
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //***************** Exercício 01
+            //// ** consistir datas
+            //DateTime dataNas;
+            //dataNas = DateTime.Parse("01-01-01");
+            //int idade;
+            //bool ok = false;
+
+            //do
+            //{
+            //    try
+            //    {
+            //        Console.Write("Digite sua data de nascimento: ");
+            //        dataNas = DateTime.Parse(Console.ReadLine());
+            //        ok = true;
+            //    }
+            //    catch
+            //    {
+            //        Console.WriteLine("Data inválida! - digite-a novamente");
+            //        ok = false;
+            //    }
+
+            //    if (dataNas > DateTime.Now)
+            //    {
+            //        Console.WriteLine("Data inválida! - digite-a novamente");
+            //        ok = false;
+            //    }
+
+            //} while (!ok);
+
+
+            //// ** Descobrir a idade
+            //idade = DateTime.Now.Year - dataNas.Year;
+
+            //dataNas = new DateTime(DateTime.Now.Year, dataNas.Month, dataNas.Day);
+
+            //if (dataNas >= DateTime.Now)
+            //{
+            //    idade--;
+            //}
+
+            //Console.WriteLine("Sua Idade é {0}", idade);
+
+            //Console.ReadKey();
+
+            //***************** Exercício 02
+            //DateTime primeiroDia = DateTime.Parse("01-01-2019");
+            //int cont = 0;
+
+
+            //do
+            //{
+            //    if ((int)primeiroDia.AddDays(cont).DayOfWeek == 0)
+            //    {
+            //        Console.WriteLine(primeiroDia.AddDays(cont).ToLongDateString());
+            //    }
+
+            //    cont++;
+
+
+            //} while (primeiroDia.AddDays(cont).Year == 2019);
+
+            //Console.WriteLine(primeiroDia);
+            //Console.ReadKey();
+
+            //***************** Exercício 03
+            //string desc;
+            //DateTime dtFab = DateTime.Parse("01-01-01"), dtVenc = DateTime.Parse("01-01-01");
+            //int op, vencido = 0;
+            //bool ok = false;
+
+            //do
+            //{
+            //    Console.Clear();
+            //    Console.Write("Digite a descrição do produto: ");
+            //    desc = Console.ReadLine();
+
+            //    if (desc.ToUpper() == "SAIR")
+            //    {
+            //        break;
+            //    }
+            //     // ****** consistência da data de fabricação
+            //    do
+            //    {
+            //        try
+            //        {
+            //            Console.Write("Digite data de Fabricação: ");
+            //            dtFab = DateTime.Parse(Console.ReadLine());
+            //            ok = true;
+            //        }
+            //        catch
+            //        {
+            //            Console.WriteLine("Data inválida - digite novamente");
+            //            ok = false;
+            //        }
+
+            //        if (dtFab > DateTime.Now)
+            //        {
+            //            Console.WriteLine("A data de fabricação não pode ser maior que a data de hoje - digite novamente");
+            //            ok = false;
+            //        }
+            //    } while (!ok);
+
+
+            //    Console.WriteLine("Qual tipo de alimento?");
+
+            //    Console.WriteLine("1. Congelados");
+            //    Console.WriteLine("2. Laticínio");
+            //    Console.WriteLine("3. Frutas frescas");
+            //    Console.WriteLine("4. Enlatados");
+            //    Console.WriteLine("5. Tetra-Pack");
+            //    Console.WriteLine("6. Farináceos");
+
+            //    do
+            //    {
+            //        op = int.Parse(Console.ReadLine());
+            //        if (op < 1 || op > 6)
+            //            Console.WriteLine("Opção inválida - (somente de 1 a 6)");
+            //    } while (op < 1 || op > 6);
+
+
+            //    switch (op)
+            //    {
+            //        case 1:
+            //            dtVenc = dtFab.AddDays(180);
+            //            break;
+
+            //        case 2:
+            //            dtVenc = dtFab.AddDays(7);
+            //            break;
+
+            //        case 3:
+            //            dtVenc = dtFab.AddDays(3);
+            //            break;
+
+            //        case 4:
+            //            dtVenc = dtFab.AddDays(365);
+            //            break;
+
+            //        case 5:
+            //            dtVenc = dtFab.AddDays(240);
+            //            break;
+
+            //        case 6:
+            //            dtVenc = dtFab.AddDays(180);
+            //            break;
+            //    }
+
+            //    if (dtVenc < DateTime.Now)
+            //    {
+            //        Console.WriteLine("Produto está {0} dias vencido!- Favor jogá-lo no lixo", (int)DateTime.Now.Subtract(dtVenc).TotalDays);
+            //        vencido++;
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine
+            //            ("Produto no prazo de validade! faltam {0} dias para vencer", (int)dtVenc.Subtract(DateTime.Now).TotalDays);
+            //    }
+
+            //    Console.ReadKey();
+
+            //} while (true);
+
+
+            //Console.WriteLine("Total de produtos vencidos: {0}", vencido);
+
+            //Console.ReadKey();
+
+            //***************** Exercício 04
+            int nPrest = 0;
+            decimal valor = 0;
+
+            do
+            {
+                Console.Clear();
+                Console.Write("Digite o valor da transação: ");
+                valor = decimal.Parse(Console.ReadLine());
+
+                if (valor == 0)
+                    break;
+
+                Console.Write("Digite o N° de prestações: ");
+                nPrest = int.Parse(Console.ReadLine());
+
+                switch (nPrest)
+                {
+                    case 1:
+                        break;
+
+                    case 2:
+                        valor *= 1.2m;
+                        break;
+
+                    case 3:
+                        valor *= 1.25m;
+                        break;
+
+                    case 4:
+                        valor *= 1.3m;
+                        break;
+
+                    case 5:
+                        valor *= 1.35m;
+                        break;
+
+                    case 6:
+                        valor *= 1.4m;
+                        break;
+                }
+
+
+                Console.WriteLine("Valor com juros: {0}", valor);
+
+                for (int i = 1; i <= nPrest; i++)
+                {
+                    Console.WriteLine
+                        ("Valor da {0}° prestação: {1:C} - Vencto: {2}", i, (valor / nPrest), DateTime.Now.AddMonths(i - 1).ToShortDateString());
+                }
+
+                Console.ReadKey();
+
+            } while (true);
+        }
+    }
+}

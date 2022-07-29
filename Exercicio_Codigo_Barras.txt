@@ -1,0 +1,99 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp36
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string CodBarras;
+
+            int BrancoBrasil = 001, BancoBradesco = 237, BancoItau = 341;
+            DateTime Data_Vencimento = DateTime.Parse("13/10/85");
+            Double Valor_Boleto_Inicial = 0, Valor_Boleto_Final = 0;
+            int CodBanco = 0;
+            int Dia, Mes, Ano;
+
+
+            Console.Write("Digite o codigo de barras: ");
+            CodBarras = Console.ReadLine();
+
+            if (CodBarras.Length != 21) // se o CODIGO DE BARRAS for diferente de 21 numeros ele sera falso e ira retornar
+            {
+                Console.WriteLine("CODIGO DE BARRAS INVÁLIDO - GENTILEZA INSERIR 21 DIGITOS - DIGITE NOVAMENTE! ");
+            }                        
+            
+            //Console.WriteLine(CodBarras.Length); // percorre a frase inteira e ve a qnte de caracteres ( tem q ser 21 para ser verdadeiro)
+
+            Console.WriteLine(CodBarras.Substring(0, 3)); // posicao 0 e conta tres casas para ler O CODIGO DO BANCO
+
+            CodBanco = int.Parse(CodBarras.Substring(0, 3)); // mostra as 3 primeiras posições do codigo de barras para ver o banco
+
+            Console.WriteLine(CodBarras.Substring(3, 8)); // mostra os 8 codigos das datas
+
+            Ano = int.Parse(CodBarras.Substring(7, 4)); // posicao 7 e quatro casas que vai ler
+            Console.WriteLine(Ano);
+
+            Mes = int.Parse(CodBarras.Substring(5, 2)); // posicao 5 e duas casas que vai ler
+            Console.WriteLine(Mes);
+
+            Dia = int.Parse(CodBarras.Substring(3, 2)); // posicao 3 e duas casas que vai ler
+            Console.WriteLine(Dia);
+
+            Console.WriteLine("Data de vencimento: {0}/{1}/{2}", Dia, Mes, Ano);
+
+            Console.WriteLine(CodBarras.Substring(13, 21)); // mostra os codigos referentes ao valor
+
+            Valor_Boleto_Inicial = Double.Parse(CodBarras.Substring(11));
+                                 
+            CodBanco = int.Parse(CodBarras.Substring(0, 3));
+
+            switch (CodBanco)
+
+            {
+                case 001:
+
+                    Console.WriteLine(BrancoBrasil);
+
+                    break;
+
+                case 237:
+
+                    Console.WriteLine(BancoBradesco);
+
+                    break;
+
+                case 341:
+
+                    Console.WriteLine(BancoItau);
+
+                    break;
+            }
+
+            
+            Console.WriteLine("Banco: {0}", CodBanco);
+            Console.WriteLine("Data de Vencimento: {0} ", Data_Vencimento.ToShortDateString());
+            Console.WriteLine("Data de hoje: {0}", DateTime.Now.ToShortDateString());
+
+            if (Data_Vencimento < DateTime.Now)
+
+            {
+                Valor_Boleto_Final = Valor_Boleto_Inicial * 1.2;
+                Console.WriteLine("Data de vencimento expirada! Será acrescido o valor de 20 % ao valor inicial.");
+                Console.WriteLine("Valor atualizado com os 20% de juros é {0:C}", Valor_Boleto_Final);
+
+            }
+            else
+            {
+                Console.WriteLine("O valor a ser pago é: {0:C}", Valor_Boleto_Inicial);
+            }
+
+            Console.ReadKey();
+
+        }
+    }
+}

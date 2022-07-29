@@ -1,0 +1,81 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AulaString
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string frase;
+            int x, y;
+            frase = "Você é um cara legal, mas não abuse!";
+            Console.WriteLine(frase.Length);
+            Console.WriteLine(frase.Substring(0, 1));
+            Console.WriteLine(frase.Substring(8, 3));
+            Console.WriteLine(frase.Substring(0, 11));
+            Console.WriteLine(frase.Substring(12));
+
+
+            Console.WriteLine(frase.IndexOf("vai"));
+            Console.WriteLine(frase.LastIndexOf("a"));
+            Console.WriteLine(frase.LastIndexOf("vai"));
+
+            string email;
+
+            //do
+            //{
+            //    Console.Write("Email: ");
+            //    email = Console.ReadLine();
+
+            //} while (email.IndexOf(" ") >= 0 || 
+            //        email.IndexOf("@") < 0 ||
+            //        email.IndexOf(".") < 0);
+
+            Console.Write(frase.Substring(0, 5));
+            x = frase.IndexOf("não");
+            Console.Write(frase.Substring(x, 4));
+            y = frase.IndexOf("é");
+            Console.Write(frase.Substring(y, 15));
+
+            //Console.Write("Email: ");
+            //email = Console.ReadLine();
+
+            //double medida;
+            //medida = double.Parse(Console.ReadLine());
+            //Console.WriteLine(medida.ToString().IndexOf(","));
+
+            string alga;
+            int n, soma = 0;
+
+            Console.Write("\nDigite alguns algarismos: ");
+            alga = Console.ReadLine();
+
+            for(int i = 0; i <= alga.Length; i++)
+            { 
+                n = int.Parse(alga.Substring(i, 1));
+                soma += n;
+            }
+
+            Console.WriteLine(soma);
+
+
+
+
+
+
+
+            Console.ReadKey();
+
+
+
+
+
+
+
+        }
+    }
+}

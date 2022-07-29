@@ -1,0 +1,126 @@
+using System;
+
+namespace Exercicio_1_Datas
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            string descriçãoProduto;
+            
+            DateTime dataAtual = DateTime.Now;
+            DateTime dataDeFabricação;
+            DateTime congeladosVali;
+            int tipo, contador = 0;
+
+            do
+            {
+
+                
+                Console.WriteLine("Informe a descrição do produto: ");
+                descriçãoProduto = Console.ReadLine();
+                if (descriçãoProduto.ToUpper() == "SAIR")
+                {
+
+                    break;
+                }
+                Console.WriteLine("Informe o tipo do produto ");
+                Console.WriteLine("1- Congelados");
+                Console.WriteLine("2- Laticínio ");
+                Console.WriteLine("3- Frutas frescas");
+                Console.WriteLine("4- Tetra-Pack ");
+                Console.WriteLine("5- Farináceos ");
+                
+
+                tipo = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Informe a data de fabricação do produto");
+                dataDeFabricação = DateTime.Parse(Console.ReadLine());
+
+                if (dataDeFabricação > DateTime.Now)
+                {
+                    contador++;
+                    Console.WriteLine("Produto vencido ");
+                    Console.ReadKey();
+                    continue;
+
+                }
+                else
+                {
+
+                    Console.WriteLine("O produtos esta dentro da data de validade ");
+                    
+
+                }
+                switch (tipo)
+                {
+
+                    case 1:
+                        congeladosVali = dataDeFabricação.AddMonths(6);
+                        TimeSpan diasVenci = congeladosVali.Subtract(DateTime.Now);
+                        int diasAte = diasVenci.Days;
+                        Console.WriteLine("O produto vencera dia {0}", congeladosVali);
+                        Console.WriteLine("Dias até o vencimento {0}", diasAte);
+
+                        break;
+
+                    case 2:
+                        congeladosVali = dataDeFabricação.AddDays(7);
+                        TimeSpan diasVenci2 = congeladosVali.Subtract(DateTime.Now);
+                        int diasAte2 = diasVenci2.Days;
+                        Console.WriteLine("O produto vencera dia {0}", congeladosVali);
+                        Console.WriteLine("Dias até o vencimento {0}", diasAte2);
+
+                        break;
+
+                    case 3:
+                        congeladosVali = dataDeFabricação.AddDays(3);
+                        TimeSpan diasVenci3 = congeladosVali.Subtract(DateTime.Now);
+                        int diasAte3 = diasVenci3.Days;
+                        Console.WriteLine("O produto vencera dia {0}", congeladosVali);
+                        Console.WriteLine("Dias até o vencimento {0}", diasAte3);
+
+                        break;
+
+                    case 4:
+                        congeladosVali = dataDeFabricação.AddMonths(8);
+                        TimeSpan diasVenci4 = congeladosVali.Subtract(dataDeFabricação);
+                        int diasAte4 = diasVenci4.Days;
+                        Console.WriteLine("O produto vencera dia {0}", congeladosVali);
+                        Console.WriteLine("Dias até o vencimento {0}", diasAte4);
+
+                        break;
+
+
+                    case 5:
+                        congeladosVali = dataDeFabricação.AddMonths(2);
+                        TimeSpan diasVenci5 = congeladosVali.Subtract(DateTime.Now);
+                        int diasAte5 = diasVenci5.Days;
+                        Console.WriteLine("O produto vencera dia {0}", congeladosVali);
+                        Console.WriteLine("Dias até o vencimento {0}", diasAte5);
+
+                        break;
+
+                    case 6:
+                        congeladosVali = dataDeFabricação.AddMonths(6);
+                        TimeSpan diasVenci6 = congeladosVali.Subtract(DateTime.Now);
+                        int diasAte6 = diasVenci6.Days;
+                        Console.WriteLine("O produto vencera dia {0}", congeladosVali);
+                        Console.WriteLine("Dias até o vencimento {0}", diasAte6);
+
+                        break;
+
+
+
+                }
+            } while (true);
+
+            Console.WriteLine("Quantidade de produtos com data de validade vencidas", contador);
+            
+            
+
+
+        }
+    }
+}

@@ -1,0 +1,107 @@
+using System;
+
+namespace Jurus
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double tranFinan,juros,valorFinal;
+            Console.WriteLine("Informe o valor do total da transação financeira ");
+                tranFinan = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("informe a quantidade de parcelas 1-2-3-4-5-6");
+            juros = double.Parse(Console.ReadLine());
+
+            switch (juros)
+            {
+                case (1):
+
+                    break;
+
+                case (2):
+                    valorFinal = (tranFinan + (tranFinan * 0.20));
+                    Console.WriteLine("O valor final a ser pago  {0:C}", valorFinal);
+                    valorFinal = valorFinal / 2;
+                    int cont=1;
+                    do
+                    {
+
+                        Console.WriteLine("Data da primeira parcela: " + DateTime.Now.AddMonths(cont) + "No Valor De {0:C} ", valorFinal);
+                        cont++;
+
+                    } while (cont <3);
+                    
+
+                    break;
+
+                case (3):
+                    valorFinal = (tranFinan + (tranFinan * 0.25));
+                    Console.WriteLine("O valor final a ser pago  {0:C}", valorFinal);
+                    valorFinal = valorFinal / 2;
+                    int cont3 = 1;
+                    do
+                    {
+
+                        Console.WriteLine("Data da primeira parcela: " + DateTime.Now.AddMonths(cont3) + "No Valor De {0:C} ", valorFinal);
+                        cont3++;
+
+                    } while (cont3 < 4);
+
+                    break;
+
+                case (4):
+                    valorFinal = (tranFinan + (tranFinan * 0.30));
+                    Console.WriteLine("O valor final a ser pago  {0:C}", valorFinal);
+                    valorFinal = valorFinal / 2;
+                    int cont4 = 1;
+                    do
+                    {
+
+                        Console.WriteLine("Data da primeira parcela: " + DateTime.Now.AddMonths(cont4) + "No Valor De {0:C} ", valorFinal);
+                        cont4++;
+
+                    } while (cont4 < 5);
+
+                    break;
+
+                case (5):
+                    valorFinal = (tranFinan + (tranFinan * 0.35));
+                    Console.WriteLine("O valor final a ser pago  {0:C}", valorFinal);
+                    valorFinal = valorFinal / 2;
+                    int cont5 = 1;
+                    do
+                    {
+
+                        Console.WriteLine("Data da primeira parcela: " + DateTime.Now.AddMonths(cont5) + "No Valor De {0:C} ", valorFinal);
+                        cont5++;
+
+                    } while (cont5 < 6);
+
+                    break;
+
+                case (6):
+                    valorFinal = (tranFinan + (tranFinan * 0.40));
+                    Console.WriteLine("O valor final a ser pago  {0:C}", valorFinal);
+                    valorFinal = valorFinal / 6;
+                    int cont6 = 1;
+                    do
+                    {
+
+                        Console.WriteLine("Data da primeira parcela: " + DateTime.Now.AddMonths(cont6) + " No Valor De {0:C} ", valorFinal);
+                        cont6++;
+
+                    } while (cont6 < 7);
+
+                    break;
+
+
+            }
+
+
+
+
+
+        }
+    }
+}

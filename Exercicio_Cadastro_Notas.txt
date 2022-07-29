@@ -1,0 +1,129 @@
+string nome, curso;
+            double mensalidade = 250.00, mensalidade2 = 0;
+            double nota1 = 0, nota2 = 0, media=0;
+            double comp=0, ling=0, secret=0;
+            int operacao;
+            string SN = "";
+
+
+            
+            Console.Clear();
+
+
+            Console.WriteLine("Insira o nome do aluno: ");
+            nome = Console.ReadLine();
+
+            Console.WriteLine("Insira a primeira nota: ");
+            nota1 = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("Insira a segunda nota: ");
+            nota2 = double.Parse(Console.ReadLine());
+
+            media = (nota1 + nota2) / 2;
+            Console.WriteLine(" A media do aluno é: {0} ", media);
+
+            Console.WriteLine("Insira o curso do aluno: ");
+
+            Console.WriteLine("A. Computação");
+            Console.WriteLine("B. Línguas");
+            Console.WriteLine("C. Secretariado");
+
+            operacao = int.Parse(Console.ReadLine());
+
+            switch (operacao)
+            {
+
+                case 1:
+                    Console.WriteLine("Curso escolhido: A. Computação");
+                    curso = Console.ReadLine();
+
+                    comp++;
+
+                    if (media>=5)
+                    {
+
+                     mensalidade2 = mensalidade - (mensalidade * 0.10);
+                     Console.WriteLine("O valor da mensalidade com desconto de 10 % é: ", mensalidade2);
+
+                     Console.WriteLine("APROVADO");
+                    }
+                    
+                    else
+                    {
+                    Console.WriteLine("REPROVADO");
+                    }
+
+
+                    break;
+
+                case 2:
+
+                    Console.WriteLine("Curso escolhido: B. Línguas");
+                    curso = Console.ReadLine();
+
+                    ling++;
+
+                    if (media >= 6)
+                    {
+
+                        mensalidade2 = mensalidade - (mensalidade * 0.20);
+                        Console.WriteLine("O valor da mensalidade com desconto de 20 % é: ", mensalidade2);
+
+                        Console.WriteLine("APROVADO");
+                    }
+
+                    else
+                    {
+                        Console.WriteLine("REPROVADO");
+                    }
+
+
+                    break;
+
+                case 3:
+
+                    Console.WriteLine("Curso escolhido: C. Secretariado");
+                    curso = Console.ReadLine();
+
+                    secret++;
+
+                    if (media >= 7)
+                    {
+
+                        mensalidade2 = mensalidade - (mensalidade * 0.30);
+                        Console.WriteLine("O valor da mensalidade com desconto de 30 % é: ", mensalidade2);
+
+                        Console.WriteLine("APROVADO");
+                    }
+
+                    else
+                    {
+                        Console.WriteLine("REPROVADO");
+                    }
+
+                    break;
+            }
+
+
+
+
+
+                   do
+                   {
+                      Console.Write("Deseja continuar? (S/N):");
+                      SN = Console.ReadLine();
+                      } while (SN.ToUpper() != "S" && SN.ToUpper() != "N");
+
+                       while (SN.ToLower()=="s"); 
+
+                       Console.ReadKey();
+
+
+
+                 
+
+
+
+        }
+    }
+}

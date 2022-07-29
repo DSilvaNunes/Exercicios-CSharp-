@@ -1,0 +1,120 @@
+using System;
+
+namespace Validador_CNPJ
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string opc = "";
+            do
+            {
+                string CNPJ;
+                double soma = 0, soma2 = 0, cont1 = 5, cont2 = 9, priDig, segunDig;
+                Console.Clear();
+                Console.Write("Digite o CNPJ: ");
+                CNPJ = Console.ReadLine();
+                if ((CNPJ.Length) != 14)
+                {
+                    Console.WriteLine("CNPJ INVALIDO deve conter 14 digitos númericos!!");
+                    Console.WriteLine("pressione qualquer tecla para continuar");
+                    Console.ReadKey();
+                    continue;
+
+
+
+                } 
+                for (int i = 0; i < 4; i++)
+                {
+                    soma += int.Parse(CNPJ.Substring(i, 1)) * cont1;
+                    cont1--;
+                }
+                for (int j = 4; j < 12; j++)
+                {
+                    soma2 += int.Parse(CNPJ.Substring(j, 1)) * cont2;
+                    cont2--;
+                }
+                priDig = soma + soma2;
+                //Console.WriteLine(priDig);
+                priDig = priDig % 11;
+                //Console.WriteLine(priDig);
+
+                if (priDig < 2)
+                {
+
+                    priDig = 0;
+
+                }
+                else
+                {
+                    priDig = 11 - priDig;
+                    //Console.WriteLine("PRIMEIRO DIG DO CNPJ FOI {0}", priDig);
+                }
+                //***************SEGUNDO DIG***************//
+                double cont3 = 6, soma3 = 0, soma4 = 0, cont4 = 9;
+                for (int i = 0; i < 5; i++)
+                {
+                    soma3 += int.Parse(CNPJ.Substring(i, 1)) * cont3;
+                    cont3--;
+                }
+                for (int j = 5; j < 13; j++)
+                {
+                    soma4 += int.Parse(CNPJ.Substring(j, 1)) * cont4;
+                    cont4--;
+                }
+
+                segunDig = soma3 + soma4;
+                segunDig = segunDig % 11;
+                if (segunDig < 2)
+                {
+
+                    segunDig = 0;
+
+                }
+                else
+                {
+                    segunDig = 11 - segunDig;
+                   // Console.WriteLine("PRIMEIRO DIG DO CNPJ FOI {0}", segunDig);
+
+                }
+                //********VALIDADOR********//
+                double n1, n2;
+                n1 = double.Parse(CNPJ.Substring(12, 1));
+                n2 = double.Parse(CNPJ.Substring(13, 1));
+                if (n1 != priDig || n2 != segunDig)
+                {
+
+                    Console.WriteLine("CNPJ INVALIDO");
+                    
+
+                }
+                else
+                {
+                    Console.WriteLine("CNPJ VALIDO");
+
+
+
+
+                }
+                
+                do
+                {
+                    Console.Write("Realizar nova consulta? (S/N): ");
+                    opc = Console.ReadLine();
+                    if (opc.ToUpper() != "N" && opc.ToUpper() != "S")
+                        Console.WriteLine("Opção Inválida!");
+                } while (opc.ToUpper() != "N" && opc.ToUpper() != "S"); //well 19.03.20  "While"
+
+
+
+
+            } while (opc.ToUpper() !="N");
+            Console.WriteLine("********************Até proxima********************");
+            Console.ReadKey();
+
+
+
+
+        }
+    }
+}

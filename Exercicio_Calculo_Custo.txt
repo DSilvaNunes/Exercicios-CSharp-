@@ -1,0 +1,120 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Exercicio00B
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string desc, sn, descTipo = "";
+            int tipo, cLim = 0, cAli = 0, cBeb = 0, cUtil = 0, cEle =0;
+            double precoCusto, precoVenda, peso, somaValor = 0;
+            const double DOLAR = 3.50;
+
+            do
+            {
+                Console.Clear();
+                Console.WriteLine("*** Cadastro de Produtos");
+
+                Console.Write("Descrição: ");
+                desc = Console.ReadLine();
+
+                Console.WriteLine("Escolha o tipo do produto");
+                Console.WriteLine("1. Limpeza");
+                Console.WriteLine("2. Alimento");
+                Console.WriteLine("3. Bebida");
+                Console.WriteLine("4. Utilides");
+                Console.WriteLine("5. Eletrônicos");
+
+                do
+                {
+                    Console.Write("Escolha de 1 a 5: ");
+                    tipo = int.Parse(Console.ReadLine());
+                } while (tipo < 1 || tipo > 5);
+
+                switch (tipo)
+                {
+                    case 1:
+                        descTipo = "Limpreza";
+                        cLim++;
+                        break;
+
+                    case 2:
+                        descTipo = "Alimento";
+                        cAli++;
+                        break;
+
+                    case 3:
+                        descTipo = "Bebida";
+                        cBeb++;
+                        break;
+
+                    case 4:
+                        descTipo = "Utilidades";
+                        cUtil++;
+                        break;
+
+                    case 5:
+                        descTipo = "Eletrônicos";
+                        cEle++;
+                        break;
+                }
+
+                Console.WriteLine("Tipo escolhido: {0}", descTipo);
+
+                Console.Write("Peso em gramas: ");
+                peso = double.Parse(Console.ReadLine());
+
+                Console.Write("Preço de custo (em dólar): ");
+                precoCusto = double.Parse(Console.ReadLine());
+
+                precoCusto *= DOLAR;
+
+                if(precoCusto < 20)
+                {
+                    precoVenda = precoCusto * 1.5;
+                }
+                else if (precoCusto >= 20 && precoCusto < 1000)
+                {
+                    precoVenda = precoCusto * 1.4;
+                }
+                else if (precoCusto >= 1000 && precoCusto < 5000)
+                {
+                    precoVenda = precoCusto * 1.3;
+                }
+                else
+                {
+                    precoVenda = precoCusto * 1.2;
+                }
+
+                Console.WriteLine("Preço de Venda: {0:C}", precoVenda);
+
+                somaValor += precoVenda;
+
+                Console.Write("Deseja continuar? ");
+                do
+                {
+                    Console.Write("Somente (S/N) ");
+                    sn = Console.ReadLine();
+                } while (sn.ToUpper() != "S" && sn.ToUpper() != "N");
+
+
+            } while (sn.ToUpper() == "S");
+
+            Console.WriteLine("Limpeza: {0}", cLim);
+            Console.WriteLine("Alimento: {0}", cAli);
+            Console.WriteLine("Bebida: {0}", cBeb);
+            Console.WriteLine("Utilidades: {0}", cUtil);
+            Console.WriteLine("Eletônicos: {0}", cEle);
+            Console.WriteLine("Somatória dos Valores: {0:C}", somaValor);
+
+
+            Console.ReadKey();
+
+        }
+    }
+}

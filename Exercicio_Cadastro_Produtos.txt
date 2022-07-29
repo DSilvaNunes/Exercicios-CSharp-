@@ -1,0 +1,269 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp30
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string descricao;
+            int tipo;
+            double produtosvencidos = 0, totalconsultado = 0;
+            double congelad = 0, Laticin = 0, Frutas = 0, Enlatad = 0, Tetra = 0, Farinac = 0;
+            DateTime datavalidade;
+            DateTime datafrabricacao;
+            DateTime datahoje = DateTime.Now;
+                       
+
+            do
+            {                             
+
+                Console.WriteLine("Descrição do produto:");
+                descricao = Console.ReadLine();
+
+                if (descricao.ToUpper() == "SAIR")
+
+                {
+                    totalconsultado = produtosvencidos + (congelad + Laticin + Frutas + Enlatad + Tetra + Farinac)-1;
+                    Console.WriteLine("Quantidade total de produtos consultados: {0}", totalconsultado);
+
+                    Console.WriteLine("Quantidade de produtos vencidos: {0}", produtosvencidos);
+                    Console.WriteLine("Quantidade de Congelados consultados dentro do prazo de validade: {0}", congelad);
+                    Console.WriteLine("Quantidade de Laticínios consultados dentro do prazo de validade: {0}", Laticin);
+                    Console.WriteLine("Quantidade de Frutas frescas consultadas dentro do prazo de validade: {0}", Frutas);
+                    Console.WriteLine("Quantidade de Enlatados consultados dentro do prazo de validade: {0}", Enlatad);
+                    Console.WriteLine("Quantidade de Tetra-Pack consultados dentro do prazo de validade: {0}", Tetra);
+                    Console.WriteLine("Quantidade de Farináceos consultados dentro do prazo de validade: {0}", Farinac);
+
+                    break;
+                }
+                               
+                Console.WriteLine("Escolha o tipo de produto:");
+                Console.WriteLine("1-Congelados");
+                Console.WriteLine("2-Laticínio");
+                Console.WriteLine("3-Frutas frescas");
+                Console.WriteLine("4-Enlatados");
+                Console.WriteLine("5-Tetra-Pack");
+                Console.WriteLine("6-Farináceos");
+                Console.WriteLine("Insira o tipo do produto:");
+                tipo = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Informe a data de fabricação:");
+                datafrabricacao = DateTime.Parse(Console.ReadLine());
+
+
+                switch (tipo)
+                {
+
+                    case 1:
+                        datavalidade = datafrabricacao.AddMonths(6);
+                        TimeSpan diasvencimento1 = datavalidade.Subtract(DateTime.Now);
+                        int tempo_ate_vencimento1 = diasvencimento1.Days;
+
+                        if (DateTime.Now < datavalidade)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("Produto apto ao consumo");
+                            Console.ForegroundColor = ConsoleColor.White;
+
+                        }
+                        else
+                        {
+                            produtosvencidos++;
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("O prazo de validade vencido! - NÃO COMERCIALIZAR");
+                            Console.ForegroundColor = ConsoleColor.White;
+                            continue;
+                        }
+
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("O produto vencerá dia {0}", datavalidade);
+                        Console.WriteLine("Tempo para o vencimento {0} dias", tempo_ate_vencimento1);
+                        Console.ForegroundColor = ConsoleColor.White;
+
+                        congelad++;
+
+                        break;
+
+                    case 2:
+                        datavalidade = datafrabricacao.AddDays(7);
+                        TimeSpan diasvencimento2 = datavalidade.Subtract(DateTime.Now);
+                        int tempo_ate_vencimento2 = diasvencimento2.Days;
+
+                        if (DateTime.Now < datavalidade)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("Produto apto ao consumo");
+                            Console.ForegroundColor = ConsoleColor.White;
+
+                        }
+
+                        else
+                        {
+                            produtosvencidos++;
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("O prazo de validade vencido! - NÃO COMERCIALIZAR");
+                            Console.ForegroundColor = ConsoleColor.White;
+
+                            continue;
+                        }
+
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("O produto vencerá dia {0}", datavalidade);
+                        Console.WriteLine("Tempo para o vencimento {0} dias", tempo_ate_vencimento2);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Laticin++;
+
+                        break;
+
+                    case 3:
+                        datavalidade = datafrabricacao.AddDays(3);
+                        TimeSpan diasvencimento3 = datavalidade.Subtract(DateTime.Now);
+                        int tempo_ate_vencimento3 = diasvencimento3.Days;
+
+                        if (DateTime.Now < datavalidade)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("Produto apto ao consumo");
+                            Console.ForegroundColor = ConsoleColor.White;
+
+                        }
+
+                        else
+                        {
+                            produtosvencidos++;
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("O prazo de validade vencido! - NÃO COMERCIALIZAR");
+                            Console.ForegroundColor = ConsoleColor.White;
+
+                            continue;
+                        }
+
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("O produto vencerá dia {0}", datavalidade);
+                        Console.WriteLine("Tempo para o vencimento {0} dias", tempo_ate_vencimento3);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Laticin++;
+
+                        Frutas++;
+
+                        break;
+
+                    case 4:
+                        datavalidade = datafrabricacao.AddMonths(8);
+                        TimeSpan diasvencimento4 = datavalidade.Subtract(DateTime.Now);
+                        int tempo_ate_vencimento4 = diasvencimento4.Days;
+
+                        if (DateTime.Now < datavalidade)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("Produto apto ao consumo");
+                            Console.ForegroundColor = ConsoleColor.White;
+
+                        }
+
+                        else
+                        {
+                            produtosvencidos++;
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("O prazo de validade vencido! - NÃO COMERCIALIZAR");
+                            Console.ForegroundColor = ConsoleColor.White;
+
+                            continue;
+                        }
+
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("O produto vencerá dia {0}", datavalidade);
+                        Console.WriteLine("Tempo para o vencimento {0} dias", tempo_ate_vencimento4);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Laticin++;
+
+                        Enlatad++;
+
+                        break;
+
+                    case 5:
+                        datavalidade = datafrabricacao.AddMonths(2);
+                        TimeSpan diasvencimento5 = datavalidade.Subtract(DateTime.Now);
+                        int tempo_ate_vencimento5 = diasvencimento5.Days;
+
+                        if (DateTime.Now < datavalidade)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("Produto apto ao consumo");
+                            Console.ForegroundColor = ConsoleColor.White;
+
+                        }
+
+                        else
+                        {
+                            produtosvencidos++;
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("O prazo de validade vencido! - NÃO COMERCIALIZAR");
+                            Console.ForegroundColor = ConsoleColor.White;
+
+                            continue;
+                        }
+
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("O produto vencerá dia {0}", datavalidade);
+                        Console.WriteLine("Tempo para o vencimento {0} dias", tempo_ate_vencimento5);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Laticin++;
+
+                        Tetra++;
+
+                        break;
+
+                    case 6:
+                        datavalidade = datafrabricacao.AddMonths(4);
+                        TimeSpan diasvencimento6 = datavalidade.Subtract(DateTime.Now);
+                        int tempo_ate_vencimento6 = diasvencimento6.Days;
+
+                        if (DateTime.Now < datavalidade)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("Produto apto ao consumo");
+                            Console.ForegroundColor = ConsoleColor.White;
+
+                        }
+
+                        else
+                        {
+                            produtosvencidos++;
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("O prazo de validade vencido! - NÃO COMERCIALIZAR");
+                            Console.ForegroundColor = ConsoleColor.White;
+
+                            continue;
+                        }
+
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("O produto vencerá dia {0}", datavalidade);
+                        Console.WriteLine("Tempo para o vencimento {0} dias", tempo_ate_vencimento6);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Laticin++;
+
+                        Farinac++;
+
+                        break;
+                }
+
+                
+
+            } while (true);
+
+
+            
+
+
+
+
+
+        }
+    }
+}

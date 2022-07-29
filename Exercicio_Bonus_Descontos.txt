@@ -1,0 +1,241 @@
+﻿using System;
+
+
+namespace Aula_00
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //string nome, op;
+            //int idade;
+            //double salario, bonus = 0.25, desconto = 0.1;
+            //bool checar;
+            //Console.WriteLine("Olá Mundo!");
+
+            //Console.Write("Nome: ");
+            //nome = Console.ReadLine();
+
+            //Console.Write("Idade: ");
+            //idade = int.Parse(Console.ReadLine());
+
+            //Console.Write("Salário: ");
+            //salario = double.Parse(Console.ReadLine());
+            //salario = (salario * (bonus + 1)) - (salario * desconto);
+            //Console.WriteLine
+            //    ("Seu nome é {0}, com {1} de idade, ganhando {2} de salário", nome, idade, salario);
+
+            //if (salario < 2000)
+            //{
+            //    Console.WriteLine("Você merece ganhar mais!");
+            //    Console.WriteLine("Peça um aumento!");
+            //}
+            //else if (salario >= 2000 && salario < 4000)
+            //{
+            //    Console.WriteLine("Está melhorando!");
+            //    Console.WriteLine("Mas ainda mereço mais!");
+            //}
+            //else if (salario >= 4000 && salario < 6000)
+            //{
+            //    Console.WriteLine("Está ficando bom!");
+            //    Console.WriteLine("Quero mais!");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Você recebe um bom salário!");
+            //    Console.WriteLine("Continue assim!");
+            //}
+
+            //Console.WriteLine("Qual sua área de atuação?");
+            //Console.WriteLine("1. Tecnologia");
+            //Console.WriteLine("2. Humanidades");
+            //Console.WriteLine("3. Exatas");
+            //Console.WriteLine("4. Biológicas");
+            //Console.WriteLine("5. Outra");
+
+            //op = Console.ReadLine();
+
+            //switch (op)
+            //{
+            //    case "1":
+            //        Console.WriteLine("Meus Pêsames! se ferrou!");
+            //        Console.WriteLine("Seu salário é de {0}", salario);
+            //        break;
+            //    case "2":
+            //        Console.WriteLine("É... dá pro gasto!");
+            //        Console.WriteLine("Seu salário é de {0}", salario + (salario * 0.1));
+            //        break;
+            //    case "3":
+            //        Console.WriteLine("Bom... você manja de matemática!");
+            //        Console.WriteLine("Seu salário é de {0}", salario + (salario * 0.5));
+            //        break;
+            //    case "4":
+            //        Console.WriteLine("Você pode ser médico ou biólogo!");
+            //        Console.WriteLine("Seu salário é de {0}", salario + (salario * 0.7));
+            //        break;
+            //    case "5":
+            //        Console.WriteLine("Você indeciso!");
+            //        Console.WriteLine("Você não tem salário");
+            //        break;
+            //    default:
+            //        Console.WriteLine("Vai carpir um quintal!");
+            //        Console.WriteLine("Somente valores de 1 a 5");
+            //        break;
+            //}
+
+            //double num1 = 0, num2 = 0;
+            //string sinal = "";
+
+            //Console.WriteLine("Digite um número: ");
+            //num1 = double.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Digite o sinal para o cálculo: ");
+            //sinal = Console.ReadLine();
+
+            //Console.WriteLine("Digite o outro número: ");
+            //num2 = double.Parse(Console.ReadLine());
+
+            //switch (sinal)
+            //{
+            //    case "+":
+            //        Console.WriteLine("Resultado: {0}", num1 + num2);
+            //        break;
+            //    case "-":
+            //        Console.WriteLine("Resultado: {0}", num1 - num2);
+            //        break;
+            //    case "/":
+            //        Console.WriteLine("Resultado: {0}", num1 / num2);
+            //        break;
+            //    case "*":
+            //        Console.WriteLine("Resultado: {0}", num1 * num2);
+            //        break;
+            //    default:
+            //        Console.WriteLine("Sinal inválido!");
+            //        break;
+            //}
+
+            //string nome;
+            //double nota1, nota2;
+            //int cont = 0, numAlunos;
+            //Console.Write("Quanto alunos há? ");
+            //numAlunos = int.Parse(Console.ReadLine());
+
+            //while (cont < numAlunos)
+            //{
+            //    Console.Write("Nome: ");
+            //    nome = Console.ReadLine();
+
+            //    Console.Write("Nota 01: ");
+            //    nota1 = double.Parse(Console.ReadLine());
+
+            //    Console.Write("Nota 02: ");
+            //    nota2 = double.Parse(Console.ReadLine());
+
+            //    Console.WriteLine("Média: {0}", (nota1 + nota2) / 2);
+            //    cont++;
+            //}
+
+
+            // WHILE
+
+            //double num = 0;
+
+            //while(num < 10)
+            //{
+            //    Console.WriteLine(num);
+            //    num++;
+            //}
+
+            //num = 1500;
+
+            //while (num < 1000)
+            //{
+            //    if(num % 5 == 0 && num % 10 == 0)
+            //    {
+            //        Console.WriteLine(num);
+            //    }
+            //    num++;
+            //}
+
+            //// DO.. WHILE
+
+            ////num = 500;
+
+            //do
+            //{
+            //    if (num % 5 == 0 && num % 10 == 0)
+            //    {
+            //        Console.WriteLine(num);
+            //    }
+            //    num++;
+
+            //} while (num < 1000);
+
+            //string nome, marca, modelo, placa, sn;
+            //double preco = 0;
+
+            //do
+            //{
+            //    Console.Clear();
+            //    Console.WriteLine("Cadastro de Veículos");
+            //    Console.Write("Proprietário: ");
+            //    nome = Console.ReadLine();
+
+            //    Console.Write("Marca: ");
+            //    marca = Console.ReadLine();
+
+            //    Console.Write("Modelo: ");
+            //    modelo = Console.ReadLine();
+
+            //    Console.Write("Placa: ");
+            //    placa = Console.ReadLine();
+
+            //    Console.Write("Preço de venda: ");
+            //    preco = double.Parse(Console.ReadLine());
+
+            //    do
+            //    {
+            //        Console.Write("Deseja continuar? (S/N) ");
+            //        sn = Console.ReadLine();
+            //    } while (sn.ToUpper() != "S" && sn.ToUpper() != "N");
+
+            //} while (sn.ToUpper() == "S");
+
+            // FOR
+
+            //for (int i = 0; i < 50; i++)
+            //{
+            //    Console.Write(" {0}",i);
+
+            //    if (i % 2 == 0)
+            //    {
+            //        continue; // retorna ao início
+            //    }
+
+            //    if (i > 30)
+            //    {
+            //        break; // sai do laço
+            //    }
+
+            //    Console.Write("!");
+
+            //}
+
+            double soma = 0, A = 1, B = 1;
+
+            for (B = 1; B <= 50; B++)
+            {
+
+                Console.WriteLine("{0} / {1} = {2}", A, B, (A / B));
+                soma = soma + (A / B);
+                Console.WriteLine("Soma: {0} ", soma);
+                A += 2;
+            }
+
+            //Console.WriteLine(soma);
+
+            Console.ReadKey();
+
+        }
+    }
+}
